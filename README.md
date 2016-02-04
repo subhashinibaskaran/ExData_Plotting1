@@ -33,82 +33,133 @@ web site</a>:
 <li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
 </ol>
 
-## Loading the data
+Our overall goal here is simply to examine how household energy usage
+varies over a 2-day period in February, 2007.
 
+### **plot1.R**
 
+* Clear the workspace variables
 
+* The data is loaded from the household_power_consumption.txt file
 
+* The data is subsetted for the dates 2007-02-01 and 2007-02-02.
 
-When loading the dataset into R, please consider the following:
-
-* The dataset has 2,075,259 rows and 9 columns. First
-calculate a rough estimate of how much memory the dataset will require
-in memory before reading into R. Make sure your computer has enough
-memory (most modern computers should be fine).
-
-* We will only be using data from the dates 2007-02-01 and
-2007-02-02. One alternative is to read the data from just those dates
-rather than reading in the entire dataset and subsetting to those
-dates.
-
-* You may find it useful to convert the Date and Time variables to
-Date/Time classes in R using the `strptime()` and `as.Date()`
+* Convert the global active power variable to numeric in R using the as.numeric() function
 functions.
 
-* Note that in this dataset missing values are coded as `?`.
-
-
-## Making Plots
-
-Our overall goal here is simply to examine how household energy usage
-varies over a 2-day period in February, 2007. Your task is to
-reconstruct the following plots below, all of which were constructed
-using the base plotting system.
-
-First you will need to fork and clone the following GitHub repository:
-[https://github.com/rdpeng/ExData_Plotting1](https://github.com/rdpeng/ExData_Plotting1)
-
-
-For each plot you should
-
-* Construct the plot and save it to a PNG file with a width of 480
+* Open a connection for the png file plot1.png with a width of 480
 pixels and a height of 480 pixels.
 
-* Name each of the plot files as `plot1.png`, `plot2.png`, etc.
+* Set the number of columns for the Plot to 1,1
 
-* Create a separate R code file (`plot1.R`, `plot2.R`, etc.) that
-constructs the corresponding plot, i.e. code in `plot1.R` constructs
-the `plot1.png` plot. Your code file **should include code for reading
-the data** so that the plot can be fully reproduced. You should also
-include the code that creates the PNG file.
+* Plot the histogram of global active power values
 
-* Add the PNG file and R code file to your git repository
-
-When you are finished with the assignment, push your git repository to
-GitHub so that the GitHub version of your repository is up to
-date. There should be four PNG files and four R code files.
+* close the connection
 
 
-The four plots that you will need to construct are shown below. 
-
-
-### Plot 1
+### plot1.png
 
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 
-### Plot 2
+### **plot2.R**
+
+* Clear the workspace variables
+
+* The data is loaded from the household_power_consumption.txt file
+
+* The data is subsetted for the dates 2007-02-01 and 2007-02-02.
+
+* Convert the global active power variable to numeric in R using the as.numeric() function
+functions.
+
+* Concatenate Date and Time variables and use strptime function to convert it into date
+convert voltage variable to numeric
+
+* Open a connection for the png file plot2.png with a width of 480
+pixels and a height of 480 pixels.
+
+* Set the number of columns for the Plot to 1,1
+
+* Plot the graph for Global Active power values
+
+* close the connection
+
+
+### plot2.png
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 
-### Plot 3
+### **plot3.R**
+
+* Clear the workspace variables
+
+* The data is loaded from the household_power_consumption.txt file
+
+* The data is subsetted for the dates 2007-02-01 and 2007-02-02.
+
+* Concatenate Date and Time variables and use strptime function to convert it into date
+convert voltage variable to numeric
+
+* Convert Sub_meter_reading1 to numeric
+
+* Convert Sub_meter_reading2 to numeric
+
+* Convert Sub_meter_reading3 to numeric
+
+* Open a connection for the png file plot3.png with a width of 480
+pixels and a height of 480 pixels.
+
+* Set the number of columns for the Plot to 1,1
+
+* Plot the graph for sub meter readings in the same plot with the legends annotation
+
+* close the connection
+
+### plot3.png
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
 
-### Plot 4
+### **plot4.R**
+
+* Clear the workspace variables
+
+* The data is loaded from the household_power_consumption.txt file
+
+* The data is subsetted for the dates 2007-02-01 and 2007-02-02.
+
+* Convert the global active power variable to numeric using the as.numeric() function
+functions.
+
+* Convert the global reactive power variable to numeric
+
+* Concatenate Date and Time variables and use strptime function to convert it into date
+convert voltage variable to numeric
+
+* Convert Sub_meter_reading1 to numeric
+
+* Convert Sub_meter_reading2 to numeric
+
+* Convert Sub_meter_reading3 to numeric
+
+* Open a connection for the png file plot4.png with a width of 480
+pixels and a height of 480 pixels.
+
+* Set the number of columns for the Plot to 2,2
+
+* Plot all the 4 different plots in the order is columnwise.
+  1. Plot for Global Active Power vs datetime
+  2. Plot for sub meter readings in the same plot with the legends annotation
+  3. Plot for Voltage vs datetime
+  4. Plot for global reactive variable vs datetime
+
+* close the connection
+
+
+### plot4.png
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
